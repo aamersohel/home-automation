@@ -12,7 +12,7 @@ const pusher = new Pusher({
 export default defineEventHandler(async (event) => {
   const { name: deviceName, value } = await readBody(event);
   await pusher.trigger("my-channel", "my-event", {
-    name: deviceName,
+    name: deviceName.toLowerCase(),
     value: value,
   });
   return {

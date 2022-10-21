@@ -1,3 +1,7 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
 // Colors
 $blue: hsl(215, 95%, 50%);
 $indigo: hsl(265, 90%, 50%);
@@ -19,36 +23,36 @@ $secondary: $gray;
 
 // Theme
 $colors: (
-  'blue': $blue,
-  'indigo': $indigo,
-  'purple': $purple,
-  'pink': $pink,
-  'red': $red,
-  'orange': $orange,
-  'yellow': $yellow,
-  'green': $green,
-  'teal': $teal,
-  'cyan': $cyan,
-  'white': $white,
-  'gray': $gray,
-  'gray-dark': $gray-dark,
+  "blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "white": $white,
+  "gray": $gray,
+  "gray-dark": $gray-dark,
 );
 
 // Custom colors
 $custom-colors: (
-  'primary': $primary,
-  'secondary': $secondary,
+  "primary": $primary,
+  "secondary": $secondary,
 );
 
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $colors);
 $theme-colors: map-merge($theme-colors, $custom-colors);
-$theme-colors-rgb: map-loop($theme-colors, to-rgb, '$value');
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 
 // Fonts
-$font-family-base: 'Roboto', $font-family-sans-serif;
+$font-family-base: "Roboto", $font-family-sans-serif;
 // Fonts: Headings
-$headings-font-family: 'Montserrat', $font-family-sans-serif;
+$headings-font-family: "Montserrat", $font-family-sans-serif;
 $headings-font-weight: 700;
 
 // Body
