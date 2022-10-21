@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   const { appId, name, password } = await readBody(event);
 
   if (
-    appId === process.env.APP_ID &&
+    appId === process.env.MASTER_APP_ID &&
     password === process.env.MASTER_PASSWORD
   ) {
     return {
