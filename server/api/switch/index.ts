@@ -11,7 +11,7 @@ const pusher = new Pusher({
 
 export default defineEventHandler(async (event) => {
   const { name: deviceName, value } = await readBody(event);
-  pusher.trigger("my-channel", "my-event", {
+  await pusher.trigger("my-channel", "my-event", {
     name: deviceName,
     value: value,
   });
